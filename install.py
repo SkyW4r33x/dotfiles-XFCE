@@ -309,7 +309,7 @@ class CombinedInstaller:
                 return False
 
         function_text = f"""
-# ------------------------------- settarget Function --------------------------- #
+    # ------------------------------- settarget Function --------------------------- #
     function settarget() {{
 
         local WHITE='\\033[1;37m'
@@ -333,7 +333,7 @@ class CombinedInstaller:
             if [ -f "$target_file" ]; then
                 rm -f "$target_file"
                 echo -e "\\n${{CYAN}}[${{BOLD}}+${{NC}}${{CYAN}}]${{NC}} Target cleared successfully\\n"
-            else:
+            else
                 echo -e "\\n${{YELLOW}}[${{BOLD}}!${{YELLOW}}]${{NC}} No target to clear\\n"
             fi
             return 0
@@ -345,7 +345,7 @@ class CombinedInstaller:
         if [ -z "$ip_address" ] || [ -z "$machine_name" ]; then
             echo -e "\\n${{RED}}▋${{NC}} Error${{RED}}${{BOLD}}:${{NC}}${{ITALIC}} usage mode.${{NC}}"
             echo -e "${{GRAY}}—————————————————————${{NC}}"
-            echo -e "  ${{CYAN}}• ${{NC}}${{COMAND}}settarget ${{NC}}192.168.1.100 Kali "
+            echo -e "  ${{CYAN}}• ${{NC}}${{COMAND}}settarget ${{NC}}192.168.1.100 Kali"
             echo -e "  ${{CYAN}}• ${{NC}}${{COMAND}}settarget ${{GRAY}}${{ITALIC}}(clear target)${{NC}}\\n"
             return 1
         fi
@@ -358,8 +358,8 @@ class CombinedInstaller:
             return 1
         fi
         
-        if ! echo "$ip_address" | awk -F'.' '{{
-            for(i=1; i<=4; i++) {{
+        if ! echo "$ip_address" | awk -F'.' '{{ 
+            for(i=1; i<=4; i++) {{ 
                 if($i < 0 || $i > 255) exit 1
                 if(length($i) > 1 && substr($i,1,1) == "0") exit 1
             }}
@@ -375,14 +375,14 @@ class CombinedInstaller:
             echo -e "${{GRAY}}—————————————————————————————————${{NC}}"
             echo -e "${{CYAN}}→${{NC}} IP Address:${{GRAY}}...........${{NC}} ${{GREEN}}$ip_address${{NC}}"
             echo -e "${{CYAN}}→${{NC}} Machine Name:${{GRAY}}.........${{NC}} ${{GREEN}}$machine_name${{NC}}\\n"
-        else:
+        else
             echo -e "\\n${{RED}}[${{BOLD}}✘${{NC}}${{RED}}]${{NC}} Could not save the target\\n"
             return 1
         fi
         
         return 0
-}}
-"""
+    }}
+    """
         try:
             if os.path.exists(rc_path):
                 with open(rc_path, 'r', encoding='utf-8') as f:
