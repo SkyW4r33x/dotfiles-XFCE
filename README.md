@@ -1,4 +1,4 @@
-![Banner](https://i.imgur.com/CS0EsS3.png)  
+![Banner](https://i.imgur.com/t7VfFsU.png)  
 **Created by SkyW4r33x**
 
 This repository provides an automated script to install and configure **SkyW4r33x**, a customized XFCE desktop environment tailored for **Debian-based systems** like **Kali Linux**. It includes XFCE panel plugins, development tools, terminal configurations, dotfiles, and Kali-inspired visual customizations optimized for pentesters and technical users.
