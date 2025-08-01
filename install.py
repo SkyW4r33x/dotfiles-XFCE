@@ -1387,7 +1387,7 @@ X-XFCE-Autostart-enabled=true"""
         print(f"\n\t\t\t{KaliStyle.RED}{KaliStyle.BOLD}H4PPY H4CK1NG!{KaliStyle.RESET}")
 
     def cleanup(self):
-        print(f"\n{KaliStyle.INFO} Cleaning temporary files...")
+        #print(f"\n{KaliStyle.INFO} Cleaning temporary files...")
         try:
             config_bin = os.path.join(self.home_dir, '.config/bin')
             if os.path.exists(config_bin):
@@ -1400,7 +1400,7 @@ X-XFCE-Autostart-enabled=true"""
                         os.chown(os.path.join(root, file), uid, gid)
                     for dir in dirs:
                         os.chown(os.path.join(root, dir), uid, gid)
-            print(f"{KaliStyle.SUCCESS} Cleanup completed")
+            #print(f"{KaliStyle.SUCCESS} Cleanup completed")
             return True
         except Exception as e:
             logging.warning(f"Could not set proper ownership: {str(e)}")
