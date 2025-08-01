@@ -110,7 +110,6 @@ Follow these steps to install the SkyW4r33x XFCE Setup:
 - **Extras**:
   - Clickable IP displays for quick clipboard copying
   - Configurable update intervals (0.25s)
-  
   ![Genmon Plugins](https://i.imgur.com/L3vgAIZ.mp4)
 
 ### Included Tools
